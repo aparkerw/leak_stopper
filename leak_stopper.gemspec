@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'leak_stopper/version'
 
 Gem::Specification.new do |gem|
-  gem.name        = 'Leak stopper'
+  gem.name        = 'leak_stopper'
   gem.version     = LeakStopper::VERSION
   gem.licenses    = ['MIT']
   gem.summary     = "Gem to identify the leaking of sensitive data on a site."
