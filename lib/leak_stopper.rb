@@ -1,9 +1,23 @@
+require 'yaml'
+require 'date'
+
+#gem includes
+
+require "leak_stopper/version"
+require "leak_stopper/config"
+require "leak_stopper/pattern_matcher"
+
 module LeakStopper
 
-  def configure
-   # block_given? ? yield(Config) : Config
+  def self.configure
+
+    yield configuration if block_given?
+
   end
 
-  class LeakDetecter
+  def self.configuration
+    @configuration ||= LeakStopper::Config.new
   end
+
 end
+
