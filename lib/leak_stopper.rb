@@ -19,7 +19,5 @@ module LeakStopper
     @configuration ||= LeakStopper::Config.new
   end
 
-  class LeakDetecter
-  end
 end
 
