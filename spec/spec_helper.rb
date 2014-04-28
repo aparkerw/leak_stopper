@@ -12,7 +12,7 @@ RSpec.configure do |config|
   config.before(:each) do
     
     LeakStopper.configure do |config|
-      config.leak_stopper_yml = "leak_stopper.yml"
+      config.leak_stopper_yml = File.join(File.dirname(__FILE__), "config", "leak_stopper.yml")
     end
 
   end
@@ -24,4 +24,8 @@ end
 
 def random_number_string(length = 10)
   (0...length).map{ ('0'..'9').to_a[rand(10)] }.join
+end
+
+def sample_yaml_pattern()
+  {"name"=>"Social Security Number", "regex"=>"[0-9]{3}-[0-9]{2}-[0-9]{4}", "description"=>"Socials are private."}
 end

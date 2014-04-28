@@ -1,1 +1,9 @@
-test
+patterns:
+  SSN:
+    name: Social Security Number
+    regex: '[0-9]{3}-[0-9]{2}-[0-9]{4}'
+    description: Social Security Numbers should never be displayed on the site.
+  UserDID:
+    name: UserDID
+    regex: 'U[B-DF-HJ-NP-TV-Z0-9]{17,19}'
+    description: UserDID is considered to be an internal resource
