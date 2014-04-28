@@ -10,7 +10,7 @@ module LeakStopper
     private
 
     def set_defaults
-      @mongoid_yml = File.join(File.dirname(__FILE__), "config", "leak_stopper.yml")
+      @leak_stopper_yml = File.join(File.dirname(__FILE__), "config", "leak_stopper.yml")
     end
 
   end

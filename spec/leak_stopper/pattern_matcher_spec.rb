@@ -41,5 +41,17 @@ module LeakStopper
       end
     end
 
+    describe "::initialize_patterns" do
+      it "should return {} if config is incorrectly initialized (no pattern yaml set)" do
+        LeakStopper.configure do |config|
+          config.leak_stopper_yml = nil
+        end
+        PatternMatcher.initialize_patterns.should == []
+      end
+      it "should return an array of pattern objects" do
+        PatternMatcher.initialize_patterns.should_not == {}
+      end
+    end
+
   end
 end
