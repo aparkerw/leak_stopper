@@ -1,4 +1,4 @@
-leak_stopper
+Leak Stopper
 ============
 
 Gem to help alert site admins when sensitive data is exposed on their site.

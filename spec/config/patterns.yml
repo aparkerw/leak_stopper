@@ -1,0 +1,11 @@
+patterns:
+  SSN:
+    name: Social Security Number
+    regex: '[0-9]{3}-[0-9]{2}-[0-9]{4}'
+    description: Social Security Numbers should never be displayed on the site.
+    valid_examples: ['111-22-1111', '222-11-2222']
+  UserDID:
+    name: UserDID
+    regex: 'U[B-DF-HJ-NP-TV-Z0-9]{17,19}'
+    description: UserDID is considered to be an internal resource
+    valid_examples: ['UBCDFGHJKL123456789', 'UBCDFGHJKL1234567890','UBCDFGHJKLM1234567890']
