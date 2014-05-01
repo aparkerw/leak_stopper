@@ -7,6 +7,8 @@ require "pattern_matcher"
 
 require "leak_stopper/version"
 require "leak_stopper/config"
+require "leak_stopper/reporter"
+require "leak_stopper/scanner"
 
 module LeakStopper
 
